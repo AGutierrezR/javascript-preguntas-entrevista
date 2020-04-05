@@ -2,13 +2,15 @@
 
 ### Tabla de Contenido
 
-| No. | Preguntas |
-|---- | ---------|
-|1  | [Cuales son las formas posibles de crear un objeto en JavaScript?](#cuales-son-las-posibles-maneras-de-crear-un-objeto-en-javascript) |
+| No. | Preguntas                                                                                                                             |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [Cuales son las formas posibles de crear un objeto en JavaScript?](#cuales-son-las-posibles-maneras-de-crear-un-objeto-en-javascript) |
+| 2   | [Cual es el proposito del metodo slice de array?](#cual-es-el-proposito-del-metodo-slice-de-array)                                |
+| 3  | [Cual es el proposito de el metodo splice de array?](#cual-es-el-proposito-del-metodo-splice-de-array)                              |
 
 1. ### Cuales son las posibles maneras de crear un objeto en JavaScript?
 
-   Existen muchas maneras de crear un bojecto en JavaScript.
+   Existen muchas maneras de crear un objecto en JavaScript.
 
    1. **Object constructor:**
       La manera mas sencilla de crear un objeto vacio es usando el Object constructor. Esta forma no es recomendada.
@@ -95,3 +97,32 @@
       ```
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+2. ### Cual es el proposito del metodo slice de array?
+
+   El metodo `slice()` returna los elementos seleccionados de un array como un nuevo array. Selecciona los elementos comenzando por el argumento *start*, y terminando por el elemento *end* que es opcional. Si se omite el argumento *end* entonces selecciona hasta el final del array. Algunos ejemplos:
+
+   ```js
+   let arrayIntegers = [1, 2, 3, 4, 5];
+   let arrayIntegers1 = arrayIntegers.slice(0,2); // returns [1,2]
+   let arrayIntegers2 = arrayIntegers.slice(2,3); // returns [3]
+   let arrayIntegers3 = arrayIntegers.slice(4); //returns [5]
+   ```
+
+   **Nota:** El metodo `slice()` no mutara el array original sino que retorna un nuevo sub conjunto como nuevo array
+
+3. ### Cual es el proposito del metodo splice de array?
+
+   El metodo `splice()` es usado para agregar/remover items desde/hacia un array, y luego retorna el item removido. El primer argumento especifica la posicion de insercion o borrado del array y el segundo argumento indica el numero de elementos que seran borrados. cada argumento adicional sera agregado al array. Algunos ejemplos:
+
+   ```js
+   let arrayIntegersOriginal1 = [1, 2, 3, 4, 5];
+   let arrayIntegersOriginal2 = [1, 2, 3, 4, 5];
+   let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
+
+   let arrayIntegers1 = arrayIntegersOriginal1.splice(0,2); // returns [1, 2]; original array: [3, 4, 5]
+   let arrayIntegers2 = arrayIntegersOriginal2.splice(3); // returns [4, 5]; original array: [1, 2, 3]
+   let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
+   ```
+
+   **Nota:** El metodo `splice()` modifica el array original y retorna el array borrado.
