@@ -4,34 +4,34 @@
 
 | No. | Preguntas                                                                                                                             |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [Cuales son las formas posibles de crear un objeto en JavaScript?](#cuales-son-las-posibles-maneras-de-crear-un-objeto-en-javascript) |
-| 2  | [Cual es la diferencia entre Call, Apply y Bind?](#cual-es-la-diferencia-entre-call-apply-y-bind)                              |
-| 3   | [Cual es el propósito del metodo slice de array?](#cual-es-el-propósito-del-método-slice-de-array)                               |
-| 4  | [Cual es el propósito de el metodo splice de array?](#cual-es-el-propósito-del-método-splice-de-array)                             |
-| 5  | [Cual es la diferencia entre slice y splice?](#cual-es-la-diferencia-entre-slice-y-splice)                              |
-| 6 | [Qué es JSON y sus operaciones comunes?](#qué-es-JSON-y-sus-operaciones-comunes)                              |
+| 1   | [¿Cuales son las formas posibles de crear un objeto en JavaScript?](#cuales-son-las-posibles-maneras-de-crear-un-objeto-en-javascript) |
+| 2  | [¿Cual es la diferencia entre Call, Apply y Bind?](#cual-es-la-diferencia-entre-call-apply-y-bind)                              |
+| 3   | [¿Cual es el propósito del metodo slice de array?](#cual-es-el-propósito-del-método-slice-de-array)                               |
+| 4  | [¿Cual es el propósito de el metodo splice de array?](#cual-es-el-propósito-del-método-splice-de-array)                             |
+| 5  | [¿Cual es la diferencia entre slice y splice?](#cual-es-la-diferencia-entre-slice-y-splice)                              |
+| 6 | [¿Qué es JSON y sus operaciones comunes?](#qué-es-JSON-y-sus-operaciones-comunes)                              |
+| 7 | [¿Como se comparan Object y Map?](#como-se-comparan-Object-y-Map)                              |
 
-
-1. ### Cuales son las posibles maneras de crear un objeto en JavaScript?
+1. ### ¿Cuales son las posibles maneras de crear un objeto en JavaScript?
 
    Existen muchas maneras de crear un objeto en JavaScript.
 
    1. **Object constructor:**
-      La manera mas sencilla de crear un objeto vacio es usando el Object constructor. Esta forma no es recomendada.
+      La manera mas sencilla de crear un objeto vacío es usando el Object constructor. Esta forma no es recomendada.
 
       ```js
       var object = new Object();
       ```
 
    2. **Object's create method:**
-      El método `create` de Object crea un nuevo objeto pasando el prototype object como un parametro.
+      El método `create` de Object crea un nuevo objeto pasando el prototype object como un parámetro.
 
       ```javascript
       var object = Object.create(null);
       ```
 
    3. **Object literal syntax:**
-      La sintaxis Object literal es equivalente al método `create` cuando se le pasa `null` como parametro.
+      La sintaxis Object literal es equivalente al método `create` cuando se le pasa `null` como parámetro.
 
       ```javascript
       var object = {};
@@ -66,7 +66,7 @@
 
       new func(x, y, z);
 
-      // **(OR)**
+      // **(O)**
 
       // Crea una nueva instancia usando la función prototype
       var newInstance = Object.create(func.prototype)
@@ -79,7 +79,7 @@
       ```
 
    6. **ES6 Class syntax:**
-      ES6 presenta la caracteristicas de classes para crear objetos
+      ES6 presenta la características de classes para crear objetos
 
       ```javascript
       class Person {
@@ -93,7 +93,7 @@
 
    7. **Singleton pattern**
 
-      Un Singleton es un objeto que solo puede ser inicializado una vez. Llamada repetidas a su contructor retornan la misma instancia y de esta manera se puede asegurar que no se crean varias instancias accidentalemente
+      Un Singleton es un objeto que solo puede ser inicializado una vez. Llamada repetidas a su constructor retornan la misma instancia y de esta manera se puede asegurar que no se crean varias instancias accidentalmente
 
       ```js
       var object = new function(){
@@ -102,7 +102,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-2. ### Cual es la diferencia entre Call, Apply y Bind?
+2. ### ¿Cual es la diferencia entre Call, Apply y Bind?
 
    La diferencia entre `call()`, `apply()` y `bind()` se explica acontinuacion:
 
@@ -120,7 +120,7 @@
    invite.call(employee2, 'Hello', 'How are you?'); // Hello Jimmy Baily, How are you?
    ```
 
-   **Apply:** El metodo `apply()` invoca la función y permite pasar argumentos como array
+   **Apply:** El método `apply()` invoca la función y permite pasar argumentos como array
 
    ```js
    var employee1 = {firstName: 'John', lastName: 'Rodson'};
@@ -134,7 +134,7 @@
    invite.apply(employee2, ['Hello', 'How are you?']); // Hello Jimmy Baily, How are you?
    ```
 
-   **Bind:** El metodo `bind()` retorna una nueva función, permitiendo pasar un array y cualquier numero de argumentos
+   **Bind:** El método `bind()` retorna una nueva función, permitiendo pasar un array y cualquier numero de argumentos
 
    ```js
    var employee1 = {firstName: 'John', lastName: 'Rodson'};
@@ -152,9 +152,9 @@
   
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-3. ### Cual es el propósito del método slice de array?
+3. ### ¿Cual es el propósito del método slice de array?
 
-   El método `slice()` returna los elementos seleccionados de un array como un nuevo array. Selecciona los elementos comenzando por el argumento *start*, y terminando por el elemento *end* que es opcional. Si se omite el argumento *end* entonces selecciona hasta el final del array. Algunos ejemplos:
+   El método `slice()` retorna los elementos seleccionados de un array como un nuevo array. Selecciona los elementos comenzando por el argumento *start*, y terminando por el elemento *end* que es opcional. Si se omite el argumento *end* entonces selecciona hasta el final del array. Algunos ejemplos:
 
    ```js
    let arrayIntegers = [1, 2, 3, 4, 5];
@@ -167,9 +167,9 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-4. ### Cual es el propósito del método splice de array?
+4. ### ¿Cual es el propósito del método splice de array?
 
-   El método `splice()` es usado para agregar/remover items desde/hacia un array, y luego retorna el item removido. El primer argumento especifica la posicion de insercion o borrado del array y el segundo argumento indica el numero de elementos que seran borrados. cada argumento adicional sera agregado al array. Algunos ejemplos:
+   El método `splice()` es usado para agregar/remover items desde/hacia un array, y luego retorna el item removido. El primer argumento especifica la posición de inserción o borrado del array y el segundo argumento indica el numero de elementos que serán borrados. cada argumento adicional sera agregado al array. Algunos ejemplos:
 
    ```js
    let arrayIntegersOriginal1 = [1, 2, 3, 4, 5];
@@ -185,7 +185,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-5. ### Cual es la diferencia entre slice y splice?
+5. ### ¿Cual es la diferencia entre slice y splice?
 
    Alguna de las mayores diferencias estan en esta tabla
 
@@ -197,9 +197,9 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-6. ### Qué es JSON y sus operaciones comunes?
+6. ### ¿Qué es JSON y sus operaciones comunes?
 
-   **JSON** es un fomato de dato que sigue la sintaxis de objeto de JavaScript. Es muy util cuando se quiere transmitir datos atraves de la red y basicamente solo un fichero de texto con la extencion .json y un MIME type de application/json
+   **JSON** es un formato de dato que sigue la sintaxis de objeto de JavaScript. Es muy util cuando se quiere transmitir datos a traves de la red y básicamente solo un fichero de texto con la extension .json y un MIME type de application/json
 
    **Parsing:** Convierte un string a native object
 
@@ -207,7 +207,7 @@
    JSON.parse(text)
    ```
 
-   **Stringification:** Convierte un native object a string para que puede ser transmitido atraves de la web
+   **Stringification:** Convierte un native object a string para que puede ser transmitido a traves de la web
 
    ```js
    JSON.stringify(object)
@@ -215,3 +215,15 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+7. ### ¿Como se comparan Object y Map?
+
+   **Object** son muy similares a **Maps** en el sentido que ambos permiten usar keys y values, recuperar values, borrar keys, y detectar si alguna key fue declarada. Por esta razón, Objects han sido usados como Maps. Pero existen diferencias que hacen preferible el uso de Maps en ciertos casos
+
+   1. Los keys en un Object son Strings y Symbols, pero en Maps puede ser cualquier valor, incluyendo funciones, objetos y cualquier primitivo.
+   2. Los keys en un Map son ordenados mientras que los keys agregados a un objeto no. Por lo que, al iterar sobre el Map, este retornara los keys en orden de inserción
+   3. Se puede obtener el tamaño de un Map con la propiedad `size`, mientras el numero de propiedades en un Object debe ser terminado manualmente (`Object.keys(myObj).length;`)
+   4. Un Map es iterable y puede ser directamente iterado, mientras que para iterar un Object require que obtengamos los keys de alguna manera e iterar sobre ellos.
+   5. Un Object tiene un prototype, por lo que existen algunos keys por defecto que puede coincidir con los keys que establezcas, por lo que hay que ser cuidadoso.
+   6. Un Map puede actuar mejor en escenarios que involucren adiciones y sustracciones de pares.
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
