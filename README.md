@@ -9,6 +9,7 @@
 | 3   | [Cual es el propósito del metodo slice de array?](#cual-es-el-propósito-del-método-slice-de-array)                               |
 | 4  | [Cual es el propósito de el metodo splice de array?](#cual-es-el-propósito-del-método-splice-de-array)                             |
 | 5  | [Cual es la diferencia entre slice y splice?](#cual-es-la-diferencia-entre-slice-y-splice)                              |
+| 6 | [Qué es JSON y sus operaciones comunes?](#qué-es-JSON-y-sus-operaciones-comunes)                              |
 
 
 1. ### Cuales son las posibles maneras de crear un objeto en JavaScript?
@@ -195,3 +196,22 @@
    | Se usa para extraer elementos de un array | Se usa para insertar o eliminar elementos desde/hacia un array |
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+6. ### Qué es JSON y sus operaciones comunes?
+
+   **JSON** es un fomato de dato que sigue la sintaxis de objeto de JavaScript. Es muy util cuando se quiere transmitir datos atraves de la red y basicamente solo un fichero de texto con la extencion .json y un MIME type de application/json
+
+   **Parsing:** Convierte un string a native object
+
+   ```js
+   JSON.parse(text)
+   ```
+
+   **Stringification:** Convierte un native object a string para que puede ser transmitido atraves de la web
+
+   ```js
+   JSON.stringify(object)
+   ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
