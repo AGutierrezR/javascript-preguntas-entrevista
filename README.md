@@ -11,6 +11,7 @@
 | 5  | [¿Cual es la diferencia entre slice y splice?](#cual-es-la-diferencia-entre-slice-y-splice)                              |
 | 6 | [¿Qué es JSON y sus operaciones comunes?](#qué-es-JSON-y-sus-operaciones-comunes)                              |
 | 7 | [¿Como se comparan Object y Map?](#como-se-comparan-Object-y-Map)                              |
+| 8 | [¿¿Cual es la diferencia entre los operadores === y ==?](#¿Cual-es-la-diferencia-entre-los-operadores-===-y-==)                              |
 
 1. ### ¿Cuales son las posibles maneras de crear un objeto en JavaScript?
 
@@ -228,3 +229,32 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
    
+8. ### ¿Cual es la diferencia entre los operadores === y ==?
+
+   JavaScript proporciona ambos tipos de comparaciones, la estricta (`===`, `!==`) y type-converting (`==`, `!=`). Los operadores strict toman el tipo de la variable ne consideración, mientras que el operador no-strict hace una corrección/conversion del tipo basándose en el valor de la variable. Los operadores strict siguen las siguientes condiciones para diferentes tipos:
+
+   1. Dos cadenas son estrictamente iguales cuando tiene la misma secuencia de caracteres, misma longitud y el mismo carácteres en las posiciones respectivas.
+   2. Dos números son estrictamente iguales cuando son numéricamente iguales, por ejemplo, Tienen el mismo valor numérico. Existen dos casos especiales.
+      1. `NaN` no es igual a nada, incluyendo `NaN`.
+      2. Cero positivo y negativo son iguales el uno con el otro.
+   3. Dos booleanos son estrictamente iguales si ambos son `true` o ambos son `false `
+   4. Dos objetos son estrictamente iguales si refieren al mismo Object
+   5. `Null` y `Undefined` no son iguales con `===` pero si son iguales con `==`, por ejemplo, `null === undefined -> true` pero `null == undefined -> true`
+
+   Otros casos serian:
+
+   ```
+   0 == false   // true
+   0 === false  // false
+   1 == "1"     // true
+   1 === "1"    // false
+   null == undefined // true
+   null === undefined // false
+   '0' == false // true
+   '0' === false // false
+   []==[] or []===[] //false, se refieren a distintos objectos en memoria
+   {}=={} or {}==={} //false, se refieren a distintos objectos en memoria
+   ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
