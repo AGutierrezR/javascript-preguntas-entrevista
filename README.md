@@ -59,7 +59,7 @@
       var object = new Person();
       ```
 
-      Esto es equivalente a una instancia creada con un método `create` con una función prototype y luego llamando esa función con una instancia y parametros como argumentos.
+      Esto es equivalente a una instancia creada con un método `create` con una función prototype y luego llamando esa función con una instancia y parámetros como argumentos.
 
       ```javascript
       function func {};
@@ -104,7 +104,7 @@
 
 2. ### ¿Cual es la diferencia entre Call, Apply y Bind?
 
-   La diferencia entre `call()`, `apply()` y `bind()` se explica acontinuacion:
+   La diferencia entre `call()`, `apply()` y `bind()` se explica a continuación:
 
    **Call:** El método `call()` invoca una función con un valor `this` dado y arguments previstos uno por uno
 
@@ -187,7 +187,7 @@
 
 5. ### ¿Cual es la diferencia entre slice y splice?
 
-   Alguna de las mayores diferencias estan en esta tabla
+   Alguna de las mayores diferencias están en esta tabla
 
    | Slice                                     | Splice                                                       |
    | ----------------------------------------- | ------------------------------------------------------------ |
@@ -227,3 +227,4 @@
    6. Un Map puede actuar mejor en escenarios que involucren adiciones y sustracciones de pares.
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+   
