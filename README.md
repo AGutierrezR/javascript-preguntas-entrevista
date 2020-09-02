@@ -13,6 +13,7 @@
 | 7 | [¿Como se comparan Object y Map?](#como-se-comparan-Object-y-Map)                              |
 | 8 | [¿Cual es la diferencia entre los operadores === y ==?](#Cual-es-la-diferencia-entre-los-operadores-===-y-==)                              |
 | 9 | [¿Que es lambda o funciones de flecha?](#Que-es-lambda-o-funciones-de-flecha)                              |
+| 10 | [¿Que es una función First Class?](#Que-es-una-función-First-Class)                              |
 
 1. ### ¿Cuales son las posibles maneras de crear un objeto en JavaScript?
 
@@ -264,4 +265,19 @@
    Una función de flecha es un sintaxis corta de una function expression y no posee su propio `this`, `arguments`, `super` o `new.target`. Estas funciones son mas adecuadas para funciones non-method, y no puede usadas como constructores.
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+10. ### ¿Que es una función First Class?
+
+    En Javascript, las funciones son objectos first class. First-class functions se refiere a cuando las funciones son tratadas como cualquier variable.
+
+    Por ejemplo, en algunos lenguajes las funciones puede ser pasadas como argumentos de otras funciones, pueden ser retornadas por otra función y puede ser asignadas a como valor de una variable. Se puede ilustrar mejor en el siguiente ejemplo:
+
+    ```js
+    const handler = () => console.log('Este es un función click handler');
+    document.addEventListener('click', handler);
+    ```
+
+    La funcion `handler` es asignada a un listener.
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
