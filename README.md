@@ -11,7 +11,8 @@
 | 5  | [¿Cual es la diferencia entre slice y splice?](#cual-es-la-diferencia-entre-slice-y-splice)                              |
 | 6 | [¿Qué es JSON y sus operaciones comunes?](#qué-es-JSON-y-sus-operaciones-comunes)                              |
 | 7 | [¿Como se comparan Object y Map?](#como-se-comparan-Object-y-Map)                              |
-| 8 | [¿¿Cual es la diferencia entre los operadores === y ==?](#¿Cual-es-la-diferencia-entre-los-operadores-===-y-==)                              |
+| 8 | [¿Cual es la diferencia entre los operadores === y ==?](#Cual-es-la-diferencia-entre-los-operadores-===-y-==)                              |
+| 9 | [¿Que es lambda o funciones de flecha?](#Que-es-lambda-o-funciones-de-flecha)                              |
 
 1. ### ¿Cuales son las posibles maneras de crear un objeto en JavaScript?
 
@@ -255,6 +256,12 @@
    []==[] or []===[] //false, se refieren a distintos objectos en memoria
    {}=={} or {}==={} //false, se refieren a distintos objectos en memoria
    ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+9. ### ¿Que es lambda o funciones de flecha?
+
+   Una función de flecha es un sintaxis corta de una function expression y no posee su propio `this`, `arguments`, `super` o `new.target`. Estas funciones son mas adecuadas para funciones non-method, y no puede usadas como constructores.
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
